@@ -3,6 +3,33 @@ const loadLessons = () => {
         .then(res => res.json()) //promise of json data
         .then((json) => displayLesson(json.data));
 };
+
+const loadLevelWord =(id)=>{
+    //console.log(id);
+    const url = `
+    https://openapi.programming-hero.com/api/level/${id}`;
+    //console.log(url);
+    fetch(url)
+    .then(res=>res.json())
+    //.then ((data)=>console.log(data));
+    .then ((data)=>displayLevelWord(data.data));
+};
+
+const displayLevelWord = (words)=>{
+    //console.log(words);
+    const wordContainer =document.getElementById('word-container');
+    wordContainer.innerHTML='';
+
+    words.forEach(word=>{
+        console.log(word);
+        const card =document.createElement('div');
+        card.innerHTML =`
+        <p>Cat</p>
+        `;
+        wordContainer.append(card);
+    })
+};
+
 const displayLesson = (lessons) => {
     //console.log(lessons);
 
