@@ -10,42 +10,70 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-      <!-- font awesome cdn-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- css connection -->
-     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <main>
-        <h2 class="text-[#4ad380] font-bold text-4xl">Choose Your Trees</h2>
+        <h2 class="text-[#4ad380] font-bold text-4xl text-center">Choose Your Trees</h2>
         <div class="grid grid-cols-12 gap-8">
 
             <!-- Categories -->
             <div class="bg-white card card-body shadow-xl col-span-3">
-                <h2 class="font-bold text-2xl">Categories</h2> 
+                <h2 class="font-bold text-2xl">Categories</h2>
                 <div class="space-y-3">
-                    <button class="btn btn-success w-full" id="allTreesbtn">All Trees</button> 
+                    <button class="btn btn-success w-full" id="allTreesbtn">All Trees</button>
 
                     <!-- catagories container                     -->
-                     <div class="space-y-3" id="catagoriesContainer">
+                    <div class="space-y-3" id="catagoriesContainer">
 
                         <!-- catagories will dynamically loaded -->
 
-                     </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Trees -->
-            <div class="bg-amber-400 col-span-6">
-                Trees
+            <div class="bg-white card card-body shadow-xl col-span-6">
+                <div id="treesContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+
+                    <!-- 1st Card -->
+                    <!-- <div class="card bg-white shadow-sm">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Card Title</h2>
+                            <p class="line-clamp-2">A card component has a figure, a body part, and inside body there are title and actions
+                                parts</p>
+
+                                <div class="badge badge-success">Success</div>
+
+                            <div class="card-actions justify-between items-center">
+                                <h2 class="font-bold text-xl text-[#4ad380]">$5000</h2>
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div> -->
+                     <!-- dynamically Added here -->
+
+                </div>
+                <!-- loading spanner -->
+                 <div id="loading-spinner" class="h-[60vh] hidden justify-center items-center">
+                     <span class="loading loading-spinner loading-md"></span>
+                 </div>
+                
             </div>
 
             <!-- Cart -->
-            <div class="bg-blue-400 col-span-3">
+            <div class="bg-white card card-body shadow-xl col-span-3">
                 Cart
             </div>
         </div>
@@ -56,7 +84,7 @@
 
 
     <!-- js -->
-     <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
